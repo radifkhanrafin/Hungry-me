@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google"
 import "./globals.css"
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/Navbar"
 import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AuthProvider } from "@/lib/auth"
@@ -11,7 +11,7 @@ export const metadata = {
   title: "Bella Vista Restaurant - Authentic Italian Cuisine",
   description:
     "Experience authentic Italian taste in the heart of the city. Fresh ingredients, traditional recipes, and warm hospitality.",
-    generator: 'v0.dev'
+    generator: 'Mahfuz '
 }
 
 export default function RootLayout({ children }) {

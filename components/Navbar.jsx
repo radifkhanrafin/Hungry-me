@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { use, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -15,14 +15,17 @@ import { Menu, Moon, Sun, Phone, User, LogOut, Settings, ShoppingBag } from "luc
 import { useTheme } from "next-themes"
 import { useAuth } from "@/lib/auth"
 
-export default function Navbar() {
+
+const Navbar = () => {
+
   const [isOpen, setIsOpen] = useState(false)
   const { theme, setTheme } = useTheme()
   const { user, logout, isAdmin, isCustomer, isAuthenticated } = useAuth()
-
+  console.log(user)
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Menu", href: "/menu" },
+    { name: "Our Menu", href: "/our-menu" },
     { name: "About", href: "/about" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
@@ -33,8 +36,9 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-[90%] mx-auto border-b-2 bg-transparent backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
+
         <Link href="/" className="flex items-center space-x-2">
           <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-lg">B</span>
@@ -191,4 +195,6 @@ export default function Navbar() {
       </div>
     </nav>
   )
-}
+};
+
+export default Navbar;
