@@ -36,8 +36,8 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="sticky top-0 z-50 w-[90%] mx-auto border-b-2 bg-transparent backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+    <nav className="sticky top-0 z-50 border-b-2 bg-transparent backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+      <div className="container w-[90%] mx-auto  flex h-16 items-center justify-between">
 
         <Link href="/" className="flex items-center space-x-2">
           <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">

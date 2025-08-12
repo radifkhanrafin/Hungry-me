@@ -33,8 +33,8 @@ const featuredDishes = [
 
 export default function FeaturedMenu() {
   return (
-    <section className="py-16 bg-muted/50">
-      <div className="container mx-auto px-4">
+    <section className="py-16  bg-[#00AEEF3D]">
+      <div className="container   px-4 w-[90%] mx-auto ">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Dishes</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
